@@ -1,4 +1,4 @@
-# Angular Canvas Mini-Game ("Slots") – Developer Guide
+# Mini-Game – Developer Guide
 
 ## Tech Stack
 
