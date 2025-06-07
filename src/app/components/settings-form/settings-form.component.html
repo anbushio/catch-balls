@@ -1,0 +1,59 @@
+<form [formGroup]="settingsForm" class="settings-form">
+  <div class="form-group">
+    <label for="fallingSpeed">Falling Speed (px/frame)</label>
+    <input
+      type="number"
+      id="fallingSpeed"
+      formControlName="fallingSpeed"
+      placeholder="Enter falling speed"
+    />
+    <div
+      class="error"
+      *ngIf="getErrorMessage(settingsForm.get('fallingSpeed'))"
+    >
+      {{ getErrorMessage(settingsForm.get("fallingSpeed")) }}
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="fallingFrequency">Falling Frequency (ms)</label>
+    <input
+      type="number"
+      id="fallingFrequency"
+      formControlName="fallingFrequency"
+      placeholder="Enter falling frequency"
+    />
+    <div
+      class="error"
+      *ngIf="getErrorMessage(settingsForm.get('fallingFrequency'))"
+    >
+      {{ getErrorMessage(settingsForm.get("fallingFrequency")) }}
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="playerSpeed">Player Speed (px/keypress)</label>
+    <input
+      type="number"
+      id="playerSpeed"
+      formControlName="playerSpeed"
+      placeholder="Enter player speed"
+    />
+    <div class="error" *ngIf="getErrorMessage(settingsForm.get('playerSpeed'))">
+      {{ getErrorMessage(settingsForm.get("playerSpeed")) }}
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="gameTime">Game Time (seconds)</label>
+    <input
+      type="number"
+      id="gameTime"
+      formControlName="gameTime"
+      placeholder="Enter game time"
+    />
+    <div class="error" *ngIf="getErrorMessage(settingsForm.get('gameTime'))">
+      {{ getErrorMessage(settingsForm.get("gameTime")) }}
+    </div>
+  </div>
+</form>

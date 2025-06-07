@@ -1,12 +1,21 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { CommonModule } from '@angular/common';
+import { SettingsFormComponent } from './components/settings-form/settings-form.component';
+import { ScoreDisplayComponent } from './components/score-display/score-display.component';
+import { GameBoardComponent } from './components/game-board/game-board.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  standalone: true,
+  imports: [
+    CommonModule,
+    SettingsFormComponent,
+    ScoreDisplayComponent,
+    GameBoardComponent,
+  ],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  title = 'slots-game';
+  title = 'Slots Game';
 }
